@@ -1,0 +1,34 @@
+.container-header {
+    background: #231d26;
+}
+.nav-item a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-item.active a{
+    background-color: #4CAF50;
+    color: white;
+}
+.nav-item a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.span{
+    color: #fff;
+}
+.bg-dark {
+    background-color: #343a40!important;
+    /* background-color: #9a59b3!important; */
+}
+img.logo {
+    width: 200px;
+    margin: 50px auto;
+}
+img.git{
+    width: 20%;
+    /* margin-left: 10px; */
+}

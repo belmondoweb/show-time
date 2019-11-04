@@ -1,0 +1,42 @@
+
+<div class="card">
+       <mat-card-header>
+        <!-- <mat-toolbar class="toolbar"> -->
+          <mat-icon style="float: right;" (click)="onNoClick()">cancel</mat-icon>
+          <mat-card-title style="margin: 0 auto;">Edit New Movie Information</mat-card-title> 
+        
+        <!-- </mat-toolbar> -->
+        </mat-card-header>
+    <div class="form-group">
+    <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="row col-md-12">
+        <div class="col-md-4">
+            <input type="file" placeholder="Poster" formControlName="Poster" class="form-control">
+            <img class="thumbnail-image" formControlName="Poster" width="300px" height="400px" src=""
+                onError="this.src='./assets/poster-placeholder.jpg';"  alt="..." />
+        </div>
+            <div class="col-md-8">   
+                <label for="genre">Title</label>
+                <input type="text" placeholder="Title" formControlName="Title" class="form-control">
+                <label for="genre">Year</label>
+                <input type="text" placeholder="Year" formControlName="Year" class="form-control">
+                <label for="genre">Runtime</label>
+                <input type="text" placeholder="Runtime" formControlName="Runtime" class="form-control">
+                 <label for="genre">Genre</label>
+                <input type="text" placeholder="Genre" formControlName="Genre" class="form-control">
+                <label for="genre">Director</label>
+                 <input type="text" formControlName="Director" class="form-control">
+                <div class="editbut"><button class="btn btn-danger" (click)="onNoClick()">No Thanks</button>
+                  <button type="submit" class="btn btn-success"  (click)="onSubmit()">
+                    <mat-icon>save</mat-icon>
+                   </button>
+                </div>
+            </div>
+        </div>
+      </form>
+     </div><!-- form group -->
+        
+</div>
+
+       
+     

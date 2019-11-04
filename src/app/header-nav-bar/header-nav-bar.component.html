@@ -1,0 +1,24 @@
+<div class="container-header"> 
+    <div class="position-relative container">
+        <div class="row justify-content-center">
+            <img class="logo align-self-center img-fluid" 
+     [src]="'./assets/logo.png'">
+        </div>
+    </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- <div class="nav-item">
+                    <a routerLink='/movies' routerLinkActive="active">Movies<span class="sr-only">(current)</span></a>  
+                </div>     -->
+                <div class="nav-item">
+                    <a routerLink='/movie-list'>Search</a>
+                </div>
+                <span style="flex: 1 1 auto"></span>
+                <app-server></app-server>
+                <button type="button" class="btn btn-success" (click)="addMovie()">Add</button><br>
+                <div class="navbar-nav-right-a">  
+                <a href="https://github.com/belmondoweb" title="GitHub">
+                    <img class="git" src="assets/github-icon.svg">
+                </a>        
+                </div>
+        </nav>
+    </div>

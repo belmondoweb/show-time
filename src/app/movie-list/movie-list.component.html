@@ -1,0 +1,27 @@
+
+       
+<mat-card>
+    <button class="btn btn-default"(click)="addMovie()">+</button>
+        <mat-card-content>        
+        <div class="gallery" *ngIf="movies$ | async as movie; else loading"> 
+          <div class="col-md-4 col-lg-3 col-sm-6 align-items-stretch" *ngFor="let x of movies$ | async">
+            <div class="gallery-item box">    
+                    <img class="" src="{{x.Poster}}">
+                <div>
+                    <h3 class="text-wrapper">{{x.Title | titleTransf}}<span></span> {{x.Year}}</h3>
+                </div>
+            <div class="text">{{x.Runtime}}</div>
+            <div class="text">{{x.Genre}}</div>
+        
+            <div class="editBtn">
+                    <button class="edit" (click)="onEdit(x)">edit</button>
+                    <button  (click)="onDelete(x.imdbID)">delete</button>
+            </div>      
+    </div>  <!--gallary-->
+  </div> <!--div class="col-md-2 md-3-->
+        </div> <!--gallery-item box"-->
+        <ng-template #loading>
+            <span>Loading Movies</span>
+        </ng-template>
+</mat-card-content>
+ </mat-card>
